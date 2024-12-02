@@ -27,12 +27,10 @@ services:
     volumes:
       - todoapp-db-data:/var/lib/mysql
     environment:
-      ENGINE: ${ENGINE}
-      NAME: ${NAME}
-      USER: ${USER}
-      PASSWORD: ${PASSWORD}
-      HOST: ${HOST}
-      PORT: ${PORT}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     networks:
       - todoapp-net
 volumes:
